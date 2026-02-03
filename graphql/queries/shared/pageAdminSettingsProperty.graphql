@@ -1,3 +1,0 @@
-fragment PageAdminSettingsProperty on PageAdminSettingsProperty {
-    EnableExternalPreview
-}

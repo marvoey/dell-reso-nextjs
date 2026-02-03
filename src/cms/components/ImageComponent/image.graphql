@@ -1,6 +1,0 @@
-fragment Image on Image {
-    AltText
-    Image {
-        ...ContentUrl
-    }
-}

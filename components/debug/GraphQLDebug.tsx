@@ -1,7 +1,7 @@
-import type { GetBlankExperiencesQuery } from "@/src/graphql/graphql";
+import type { GetBlankExperienceByUrlQuery } from "@/src/codegen/graphql/graphql";
 
 interface GraphQLDebugProps {
-  result: GetBlankExperiencesQuery;
+  result: GetBlankExperienceByUrlQuery;
   authType: string;
   queryName?: string;
   baseDomain?: string;
@@ -45,18 +45,6 @@ export default function GraphQLDebug({
             {JSON.stringify(result, null, 2)}
           </pre>
         </details>
-        {result.BlankExperience?.items && result.BlankExperience.items.length > 0 && (
-          <div className="mt-4">
-            <h3>URLs:</h3>
-            <ul>
-              {result.BlankExperience.items.map((item, index) => (
-                <li key={index}>
-                  {item?._metadata?.url?.default ?? "No URL"}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </section>
   );

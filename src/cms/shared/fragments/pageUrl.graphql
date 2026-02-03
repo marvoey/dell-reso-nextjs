@@ -1,7 +1,0 @@
-fragment PageUrl on IContentMetadata {
-    url {
-        default
-        hierarchical
-        type
-    }
-}

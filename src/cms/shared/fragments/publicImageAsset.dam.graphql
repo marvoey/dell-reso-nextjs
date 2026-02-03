@@ -1,4 +1,0 @@
-fragment PublicImageAsset on cmp_PublicImageAsset {
-    AltText
-    Url
-}
