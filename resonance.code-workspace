@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "resonance",
+			"path": "."
+		},
+		{
+			"name": "node_modules",
+			"path": "../../node_modules"
+		},
+		{
+			"name": "opti-graphql-client",
+			"path": "../../opti-graphql-client"
+		},
+		{
+			"name": "opti-astro",
+			"path": "../../opti-astro"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "/home/marvin/Projects/node_modules/typescript/lib"
+	}
+}

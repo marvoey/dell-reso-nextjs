@@ -12,6 +12,8 @@ import { parallaxMouseMovement, parallaxScroll } from "@/utlis/parallax";
 import "tippy.js/dist/tippy.css";
 import { init_wow } from "@/utlis/initWowjs";
 import { headerChangeOnScroll } from "@/utlis/changeHeaderOnScroll";
+import HeaderPreview from "@/components/headers/HeaderPreview";
+import FooterPreview from "@/components/footers/FooterPreview";
 
 export default function RootLayout({ children }) {
   const path = usePathname();
@@ -69,7 +71,23 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="appear-animate body">{children}</body>
+      <body className="appear-animate body">
+        <div className="theme-main">
+          <div className="page" id="top">
+            {/* Navigation Panel */}
+            <nav className="main-nav transparent stick-fixed wow-menubar">
+              <HeaderPreview />
+            </nav>
+            {/* End Navigation Panel */}
+            {children}
+            {/* Footer */}
+            <footer className="page-section footer bg-gray-light-1 pb-30">
+              <FooterPreview />
+            </footer>
+            {/* End Footer */}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

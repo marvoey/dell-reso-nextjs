@@ -1,0 +1,16 @@
+query articleByGuid($guid: String!) {
+  ArticlePage(where: { Guid: { eq: $guid } }) {
+    total
+    item {
+      _metadata {
+        url {
+          default
+          base
+        }
+        key
+        version
+        locale
+      }
+    }
+  }
+}

@@ -11,13 +11,18 @@ const config: CodegenConfig = {
   documents: ["src/**/*.ts"],
   ignoreNoDocuments: true,
   generates: {
-    "./src/graphql/": {
+    "./src/codegen/graphql/": {
       preset: "client",
+      presetConfig: {
+        fragmentMasking: {
+          unmaskFunctionName: "getFragmentData",
+        }
+      },
       config: {
         documentMode: "string",
       },
     },
-    "./schema.graphql": {
+    "./src/codegen/schema.graphql": {
       plugins: ["schema-ast"],
       config: {
         includeDirectives: true,
